@@ -1,3 +1,3 @@
-# Cacluator 
-## It's a basic calcultor in Python
+# Basic Calculator
+### It's a basic calcultor in 
  
