@@ -1,3 +1,3 @@
 # Basic Calculator
-### It's a basic calcultor in 
+### A calculator for basic arithmetic calculations using Python
  

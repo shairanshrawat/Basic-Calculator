@@ -15,16 +15,20 @@
 # BONUS: Test your function with the values 6, 4 and divide 
 # Have your function return an error message when invalid values are received
 def addorsub(a,b,oper):
-     if(oper=="add"):
-         return (a+b)
-     elif(oper=="subtract"):
-             return(a-b)
-     else:
-      return "Invalid operation"
-           
-a=int(input("Enter 1st number: "))
-b=int(input("Enter 2nd number: "))
-oper=input("Enter the operation to perform with the two mnumbers: ")
-result=addorsub(a,b,oper)
-print(result)    
+    if(oper.lower()=="add"):
+        return a+b
+    elif(oper.lower()=="subtract"):
+        return a-b
+    else:
+        return "Invalid operation"
+
+
+if __name__ == "__main__":
+    a = int(input("Enter 1st number: "))
+    b = int(input("Enter 2nd number: "))
+    operation = input("Enter the operation to perform with the two numbers: ")
+    result = addorsub(a, b, operation)
+    print(result)    
+
+
 
