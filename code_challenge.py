@@ -1,34 +1,39 @@
-# Create a calculator function
-# The function should accept three parameters:
-# first_number: a numeric value for the math operation
-# second_number: a numeric value for the math operation
-# operation: the word 'add' or 'subtract'
-# the function should return the result of the two numbers added or subtracted
-# based on the value passed in for the operator
-#
-# Test your function with the values 6,4, add 
-# Should return 10
-#
-# Test your function with the values 6,4, subtract 
-# Should return 2
-# 
-# BONUS: Test your function with the values 6, 4 and divide 
-# Have your function return an error message when invalid values are received
-def addorsub(a,b,oper):
-    if(oper.lower()=="add"):
-        return a+b
-    elif(oper.lower()=="subtract"):
-        return a-b
-    else:
-        return "Invalid operation"
+class Operator:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def add(self):
+        return self.a+self.b
+
+    def sub(self):
+        return self.a-self.b
+
+    def mul(self):
+        return self.a*self.b
+
+    def div(self):
+        return self.a/self.b
 
 
 if __name__ == "__main__":
     a = int(input("Enter 1st number: "))
     b = int(input("Enter 2nd number: "))
+    oper = Operator(a, b)
     operation = input("Enter the operation to perform with the two numbers: ")
-    result = addorsub(a, b, operation)
-    print(result)    
+
+    if operation == "+" or operation.lower() == "add":
+        result = oper.add()
+    elif operation == "-" or operation.lower() == "subtract":
+        result = oper.sub()
+    elif operation == "*" or operation.lower() == "multiply":
+        result = oper.mul()
+    elif operation == "/" or operation.lower() == "divide":
+        result = oper.div()
+    else:
+        print("Please enter a valid operation")
+
+    print("Result is: %.2f" %result)    
 
 
 
